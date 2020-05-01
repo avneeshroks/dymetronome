@@ -7,7 +7,7 @@ export class ScheduledMetronome extends BaseMetronome {
         this.tickTimeouts = [];
     }
 
-    start(callbackFn) {
+    start(callbackFn, endCallbackFn) {
         super.start();
 
         let now = this.audioCtx.currentTime;
@@ -29,6 +29,11 @@ export class ScheduledMetronome extends BaseMetronome {
                 now += timeoutDuration;
             }
         });
+
+        console.log(
+            `registering end event.`
+        );
+        this.tickTimeouts.push(setTimeout(() => endCallbackFn(), now * 1000 + 10));
     }
 
     stopM(callbackFn) {
