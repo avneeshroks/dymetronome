@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/dymetronome/static/css/main.47c2fbb5.chunk.css",
-    "main.js": "/dymetronome/static/js/main.fb04c80b.chunk.js",
-    "main.js.map": "/dymetronome/static/js/main.fb04c80b.chunk.js.map",
+    "main.js": "/dymetronome/static/js/main.b11a395d.chunk.js",
+    "main.js.map": "/dymetronome/static/js/main.b11a395d.chunk.js.map",
     "runtime-main.js": "/dymetronome/static/js/runtime-main.2cfc0f15.js",
     "runtime-main.js.map": "/dymetronome/static/js/runtime-main.2cfc0f15.js.map",
-    "static/js/2.6ae1d9a7.chunk.js": "/dymetronome/static/js/2.6ae1d9a7.chunk.js",
-    "static/js/2.6ae1d9a7.chunk.js.map": "/dymetronome/static/js/2.6ae1d9a7.chunk.js.map",
+    "static/js/2.3ee14422.chunk.js": "/dymetronome/static/js/2.3ee14422.chunk.js",
+    "static/js/2.3ee14422.chunk.js.map": "/dymetronome/static/js/2.3ee14422.chunk.js.map",
     "index.html": "/dymetronome/index.html",
-    "precache-manifest.842ffdf1e42e550b861448eeaac97541.js": "/dymetronome/precache-manifest.842ffdf1e42e550b861448eeaac97541.js",
+    "precache-manifest.97de04406ee5fbcd44c69332799419dd.js": "/dymetronome/precache-manifest.97de04406ee5fbcd44c69332799419dd.js",
     "service-worker.js": "/dymetronome/service-worker.js",
     "static/css/main.47c2fbb5.chunk.css.map": "/dymetronome/static/css/main.47c2fbb5.chunk.css.map",
-    "static/js/2.6ae1d9a7.chunk.js.LICENSE.txt": "/dymetronome/static/js/2.6ae1d9a7.chunk.js.LICENSE.txt"
+    "static/js/2.3ee14422.chunk.js.LICENSE.txt": "/dymetronome/static/js/2.3ee14422.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2cfc0f15.js",
-    "static/js/2.6ae1d9a7.chunk.js",
+    "static/js/2.3ee14422.chunk.js",
     "static/css/main.47c2fbb5.chunk.css",
-    "static/js/main.fb04c80b.chunk.js"
+    "static/js/main.b11a395d.chunk.js"
   ]
 }
