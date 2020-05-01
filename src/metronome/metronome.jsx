@@ -1,20 +1,47 @@
 import React from 'react';
 import { ScheduledMetronome } from '../utils/scheduledMetronome';
 import './metronome.css';
+import { Link } from 'react-router-dom';
 
-export class Metronome extends React.Component {
+export default class Metronome extends React.Component {
 
     metronome;
     currentTempo = null;
 
     constructor(props) {
         super(props);
-        this.plan = this.formatPlan(props.plan);
+        let rawPlan = this.getPlan();
+        this.plan = this.formatPlan(rawPlan);
         this.handleMetronomeStartClick = this.handleMetronomeStartClick.bind(this);
         this.handleMetronomeStopClick = this.handleMetronomeStopClick.bind(this);
         this.handleTick = this.handleTick.bind(this);
         this.handleStop = this.handleStop.bind(this);
         this.handlePlanSeqEnd = this.handlePlanSeqEnd.bind(this);
+    }
+
+    getPlan() {
+        return [
+            {
+                tempo: 40,
+                duration: 0.1
+            },
+            {
+                tempo: 60,
+                duration: 0.1
+            },
+            {
+                tempo: 80,
+                duration: 0.1
+            },
+            {
+                tempo: 120,
+                duration: 0.2
+            },
+            {
+                tempo: 210,
+                duration: 0.2
+            },
+        ];
     }
 
     formatPlan(plan) {
@@ -86,7 +113,8 @@ export class Metronome extends React.Component {
                             {`Currently playing @ : ${this.currentTempo} Bpm...`}
                         </div>
                         : <div>
-                            {`It'll play as per plan selected`}
+                            {`It'll play as per plan selected. If not created yet then go to `}
+                            <Link to="/">plan...</Link>
                         </div>
                     }
                 </div>

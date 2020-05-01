@@ -4,6 +4,7 @@
     width: auto;
     flex-direction: column;
     justify-content: center;
+    height: calc(100vh - 60px);
 }
 
 .btnWrapper {
