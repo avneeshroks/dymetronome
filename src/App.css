@@ -1,3 +1,11 @@
 .App {
-  text-align: center;
+  padding: 30px;
+  display: flex;
+  width: auto;
+  height: calc(100vh - 60px);
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: monospace;
 }
