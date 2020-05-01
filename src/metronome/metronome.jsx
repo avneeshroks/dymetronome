@@ -14,6 +14,7 @@ export class Metronome extends React.Component {
         this.handleMetronomeStopClick = this.handleMetronomeStopClick.bind(this);
         this.handleTick = this.handleTick.bind(this);
         this.handleStop = this.handleStop.bind(this);
+        this.handlePlanSeqEnd = this.handlePlanSeqEnd.bind(this);
     }
 
     formatPlan(plan) {
@@ -26,7 +27,7 @@ export class Metronome extends React.Component {
 
     handleMetronomeStartClick(e){
         this.metronome = new ScheduledMetronome(this.plan);
-        this.metronome.start(this.handleTick);
+        this.metronome.start(this.handleTick, this.handlePlanSeqEnd);
         this.setState({});
     }
     
@@ -44,6 +45,11 @@ export class Metronome extends React.Component {
     
     handleStop(time) {
         console.log(`Metronome Stopped`);
+    }
+    
+    handlePlanSeqEnd() {
+        this.metronome = null;
+        this.setState({});
     }
 
     render() {
