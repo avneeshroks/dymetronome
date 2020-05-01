@@ -1,5 +1,6 @@
-import React from "react";
-import { ScheduledMetronome } from "../utils/scheduledMetronome";
+import React from 'react';
+import { ScheduledMetronome } from '../utils/scheduledMetronome';
+import './metronome.css';
 
 export class Metronome extends React.Component {
 
@@ -46,28 +47,40 @@ export class Metronome extends React.Component {
     }
 
     render() {
-
-        const currentTempo = this.metronome && !!this.metronome.playing && this.currentTempo ? this.currentTempo : null;
+        const playing = this.metronome && !!this.metronome.playing;
+        const currentTempo = playing && this.currentTempo ? this.currentTempo : null;
 
         return (
-            <div>
-                <div>
-                    <button
-                        onClick={this.handleMetronomeStartClick}
-                    >
-                        Start
-                    </button>
-                    <button
-                        onClick={this.handleMetronomeStopClick}
-                    >
-                        Stop
-                    </button>
+            <div className="mWrapper">
+                <div className="btnWrapper">
+                    {
+                        !playing
+                        ? <button
+                            className="startBtn"
+                            onClick={this.handleMetronomeStartClick}
+                        >
+                            <span className="btnText">
+                                Start
+                            </span>
+                        </button>
+                        :<button
+                            className="endBtn"
+                            onClick={this.handleMetronomeStopClick}
+                        >
+                            <span className="btnText">
+                                Stop
+                            </span>
+                        </button>
+                    }
                 </div>
-                <div>
+                <div className="playingMsg">
                     {
                         currentTempo
-                        && <div>
+                        ? <div>
                             {`Currently playing @ : ${this.currentTempo} Bpm...`}
+                        </div>
+                        : <div>
+                            {`It'll play as per plan selected`}
                         </div>
                     }
                 </div>

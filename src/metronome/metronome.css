@@ -1,0 +1,65 @@
+.mWrapper {
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.startBtn {
+    background-color: aquamarine;
+    width: 150px;
+    height: auto;
+    min-height: 50px;
+    text-transform: uppercase;
+    text-shadow: #fff 0px 2px 5px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 1000;
+    text-align: center;
+    -webkit-appearance: none;
+    border : none;
+    box-shadow: aqua 0px 2px 8px;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+.endBtn {
+    background-color: orangered;
+    width: 150px;
+    height: auto;
+    min-height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: #fff 0px 2px 5px;
+    font-family: monospace;
+    font-weight: 1000;
+    text-align: center;
+    -webkit-appearance: none;
+    border : none;
+    box-shadow: palevioletred 0px 2px 8px;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.startBtn:focus, .endBtn:focus {
+    outline: none;
+}
+
+.playingMsg {
+    margin: 15px 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
