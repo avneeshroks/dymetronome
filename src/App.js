@@ -1,24 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Metronome } from './metronome/metronome';
 
 function App() {
+
+  const plan = [
+    {
+      tempo: 40,
+      duration: 0.1
+    },
+    {
+      tempo: 60,
+      duration: 0.1
+    },
+    {
+      tempo: 80,
+      duration: 0.1
+    },
+    {
+      tempo: 120,
+      duration: 0.2
+    },
+    {
+      tempo: 210,
+      duration: 0.2
+    },
+  ];
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Metronome plan={plan}></Metronome>
     </div>
   );
 }
