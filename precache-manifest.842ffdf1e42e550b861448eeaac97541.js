@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d1c1b630e9ccf4e94a19ac2fb1c159b",
+    "revision": "7c32290f837f92ff0af5cbc82d11f377",
     "url": "/dymetronome/index.html"
   },
   {
-    "revision": "15c1fe7175b093bc15d7",
-    "url": "/dymetronome/static/css/main.f6cffc85.chunk.css"
+    "revision": "15fbe398d0e3c9303218",
+    "url": "/dymetronome/static/css/main.47c2fbb5.chunk.css"
   },
   {
     "revision": "b28eea604bf8cacaf501",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dymetronome/static/js/2.6ae1d9a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "15c1fe7175b093bc15d7",
-    "url": "/dymetronome/static/js/main.cf6bd35c.chunk.js"
+    "revision": "15fbe398d0e3c9303218",
+    "url": "/dymetronome/static/js/main.fb04c80b.chunk.js"
   },
   {
     "revision": "c2cb45558772b462fce8",
