@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScheduledMetronome } from '../utils/scheduledMetronome';
 import './metronome.css';
-import { Link } from 'react-router-dom';
 
 export default class Metronome extends React.Component {
 
@@ -113,8 +112,7 @@ export default class Metronome extends React.Component {
                             {`Currently playing @ : ${this.currentTempo} Bpm...`}
                         </div>
                         : <div>
-                            {`It'll play as per plan selected. If not created yet then go to `}
-                            <Link to="/">plan...</Link>
+                            {`It'll play as per plan selected. If not created yet then go to plan...`}
                         </div>
                     }
                 </div>
