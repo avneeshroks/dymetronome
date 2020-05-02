@@ -14,10 +14,10 @@
 
 button.MuiButtonBase-root.MuiFab-root.MuiFab-primary {
     position: absolute;
-    bottom: 100px;
+    bottom: 84px;
     right: 30px;
-    width: 75px;
-    height: 75px;
+    width: 56px;
+    height: 56px;
 }
 
 .plannerWrapper .MuiSvgIcon-root {
