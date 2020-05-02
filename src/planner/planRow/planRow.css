@@ -1,0 +1,65 @@
+    
+.plannerRow {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: aquamarine 0px 2px 8px;
+    border: 1px solid darkcyan;
+    border-radius: 3px;
+}
+
+.plInputWrapper {
+    margin: 0px 5px;
+}
+
+.plInput {
+    width: 80%;
+    height: 34px;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 23px;
+    border: 1px solid aquamarine;
+    border-radius: 5px;
+    background-color: lavender;
+    box-shadow: 0px 0px 4px darkseagreen;
+}
+
+.plInput:focus {
+    outline: none;
+}
+
+.delPlanBtn {
+    -webkit-appearance: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    background-color: white;
+    color: orangered;
+    width: 10%;
+    float: right;
+}
+
+.plSubRowWarpper {
+    display: flex;
+    flex-direction: row;
+}
+
+.subRowItem {
+    padding: 5px;
+}
+
+.bpmLabel{
+    font-size: 28px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.timePicker {
+    width: 40%;
+}
