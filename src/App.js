@@ -2,7 +2,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import ScheduleIcon from '@material-ui/icons/Schedule';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Planner from './planner/planner';
@@ -17,6 +17,15 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {});
+  
+    // returned function will be called on component unmount 
+    return () => {
+      window.removeEventListener('scroll', () => {})
+    }
+  }, [])
 
   const handleNavigationChange = (event, newValue) => {
     setValue(newValue);

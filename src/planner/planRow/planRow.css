@@ -12,6 +12,10 @@
     border-radius: 3px;
 }
 
+.plannerRow:last-of-type {
+    margin-bottom: 140px;
+}
+
 .plInputWrapper {
     margin: 0px 5px;
 }
