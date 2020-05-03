@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dymetronome/precache-manifest.9ae5141396b92ecfe9a904fc6c044de7.js"
+  "/dymetronome/precache-manifest.b6307fa9e1a5e6908094b8d550e2084c.js"
 );
 
 self.addEventListener('message', (event) => {
