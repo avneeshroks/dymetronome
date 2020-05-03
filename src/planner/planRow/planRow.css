@@ -1,4 +1,24 @@
-    
+
+.wrapperBtnForFocus {
+    display: block;
+    -webkit-appearance: none;
+    border: unset;
+    background: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: unset;
+    -webkit-writing-mode: unset !important;
+}
+
+.wrapperBtnForFocus:focus {
+    outline: none;
+}
+
+.wrapperBtnForFocus:last-of-type {
+    margin-bottom: 140px;
+}
+
 .plannerRow {
     display: flex;
     width: auto;
@@ -10,10 +30,6 @@
     box-shadow: aquamarine 0px 2px 8px;
     border: 1px solid darkcyan;
     border-radius: 3px;
-}
-
-.plannerRow:last-of-type {
-    margin-bottom: 140px;
 }
 
 .plInputWrapper {
