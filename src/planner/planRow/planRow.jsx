@@ -8,6 +8,7 @@ import InputNumber from '../../core/inputNumber/inputNumber';
 export default class PlanRow extends React.Component {
 
     bpmValue = 40;
+    isBpmDisabled = true
 
     constructor(props) {
         super(props);
@@ -38,6 +39,7 @@ export default class PlanRow extends React.Component {
                     min={40}
                     max={220}
                     onChangeCommitted={this.handleBpmSliderVauleChange}
+                    disabled={this.isBpmDisabled}
                 />
                 </div>
                 <div className="plSubRowWarpper">
