@@ -13,7 +13,7 @@
 }
 
 button.MuiButtonBase-root.MuiFab-root.MuiFab-primary {
-    position: absolute;
+    position: fixed;
     bottom: 84px;
     right: 30px;
     width: 56px;
