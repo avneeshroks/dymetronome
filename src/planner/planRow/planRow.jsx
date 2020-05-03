@@ -24,6 +24,7 @@ export default class PlanRow extends React.Component {
     }
 
     handleBpmSliderVauleChange(e) {
+        this.isBpmDisabled = false;
         this.setState({});
     }
 
