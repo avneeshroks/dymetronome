@@ -14,6 +14,8 @@ export default class PlanRow extends React.Component {
         super(props);
         this.valuetext = this.valuetext.bind(this);
         this.handleBpmSliderVauleChange = this.handleBpmSliderVauleChange.bind(this);
+        this.handleOnFocus = this.handleOnFocus.bind(this);
+        this.handleOnBlur = this.handleOnBlur.bind(this);
     }
 
     valuetext(value) {
@@ -25,39 +27,54 @@ export default class PlanRow extends React.Component {
         this.setState({});
     }
 
+    handleOnFocus(e) {
+        this.isBpmDisabled = false;
+        this.setState({});
+    }
+    handleOnBlur(e) {
+        this.isBpmDisabled = true;
+        this.setState({});
+    }
+
     render() {
         return (
-            <div className="plannerRow">
-                <div className="plInputWrapper">
-                <Slider
-                    defaultValue={40}
-                    getAriaValueText={this.valuetext}
-                    aria-labelledby="discrete-slider"
-                    valueLabelDisplay="auto"
-                    step={1}
-                    marks
-                    min={40}
-                    max={220}
-                    onChangeCommitted={this.handleBpmSliderVauleChange}
-                    disabled={this.isBpmDisabled}
-                />
-                </div>
-                <div className="plSubRowWarpper">
-                    <div className="subRowItem bpmLabel">
-                        { `${this.bpmValue} Bpm` }
+            <button
+                className="wrapperBtnForFocus"
+                onFocus={this.handleOnFocus}
+                onBlur={this.handleOnBlur}
+            >
+                <div className="plannerRow">
+                    <div className="plInputWrapper">
+                        <Slider
+                            defaultValue={40}
+                            getAriaValueText={this.valuetext}
+                            aria-labelledby="discrete-slider"
+                            valueLabelDisplay="auto"
+                            step={1}
+                            marks
+                            min={40}
+                            max={220}
+                            onChangeCommitted={this.handleBpmSliderVauleChange}
+                            disabled={this.isBpmDisabled}
+                        />
                     </div>
+                    <div className="plSubRowWarpper">
+                        <div className="subRowItem bpmLabel">
+                            {`${this.bpmValue} Bpm`}
+                        </div>
 
-                    <div className="subRowItem timePicker"> 
-                        <InputNumber min={0} max={10} />
-                    </div>
+                        <div className="subRowItem timePicker">
+                            <InputNumber min={0} max={10} />
+                        </div>
 
-                    <div className="subRowItem delPlanBtn">
-                        <span>
-                            <DeleteOutlineIcon></DeleteOutlineIcon>
-                        </span>
+                        <div className="subRowItem delPlanBtn">
+                            <span>
+                                <DeleteOutlineIcon></DeleteOutlineIcon>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </button>
         )
     }
 }
