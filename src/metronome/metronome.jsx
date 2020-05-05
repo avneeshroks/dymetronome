@@ -18,6 +18,11 @@ export default class Metronome extends React.Component {
         this.handlePlanSeqEnd = this.handlePlanSeqEnd.bind(this);
     }
 
+    componentWillUnmount() {
+        this.metronome.stopM(this.handleStop);
+        this.metronome = null;
+    }
+
     getPlan() {
         return [
             {
